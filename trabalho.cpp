@@ -18,7 +18,7 @@ vector<string> times = {
     };
 
 bool idTime(string time, int i = 0){
-//verificar se o time esta no campionato ou nao
+//verificar se o time esta no campeonato ou nao
     if(time == times[i]){
         return true;
     }if(i==(times.size()-1)){//caso tenham mais times  o .size ajuda a ter controle da quantidade
