@@ -24,7 +24,7 @@ bool idTime(string time, int i = 0){
     }if(i==(times.size()-1)){//caso tenham mais times  o .size ajuda a ter controle da quantidade
         return false; 
     }else{
-        return idTime(time,++i);
+        return idTime(time,++i); // ++i soma 1 a i
     }
 
     
