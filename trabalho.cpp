@@ -18,6 +18,155 @@ vector<string> times = {
         "Nenhum" // 13
     };
 
+
+
+string Jogos(int a, int b) {
+    vector<vector<vector<string>>> matrizGRUPOS(20, vector<vector<string>>(20));
+
+    matrizGRUPOS[1][13] = {
+        "| FASE DE GRUPOS |",
+        "AVAÍ x SANTA CATARINA",
+        "AVAÍ x FIGUEIRENSE",
+        "AVAÍ x JOINVILLE",                 // Jogos do AVAÍ como mandante
+        "AVAÍ x MARCÍLIO DIAS",
+        "AVAÍ x CONCÓRDIA", 
+        "AVAÍ x CRICIÚMA",
+        "| MATA-MATA |",
+        "AVAÍ x FIGUEIRENSE",
+        "AVAÍ x CHAPECOENSE"
+    };
+
+    matrizGRUPOS[2][13] = {
+        "| FASE DE GRUPOS |",
+        "BARRA x JOINVILLE",
+        "BARRA x SANTA CATARINA",
+        "BARRA x HERCÍLIO LUZ",                 // Jogos do BARRA como mandante
+        "BARRA x CHAPECOENSE",
+        "BARRA x FIGUEIRENSE", 
+        "BARRA x AVAÍ"
+    };
+
+    matrizGRUPOS[3][13] = {
+        "| FASE DE GRUPOS |",
+        "BRUSQUE x AVAÍ",
+        "BRUSQUE x CHAPECOENSE",
+        "BRUSQUE x CARAVAGGIO",           // Jogos do BRUSQUE como mandante
+        "BRUSQUE x BARRA",
+        "BRUSQUE x CRICIÚMA",
+        "BRUSQUE x HERCÍLIO LUZ",
+        "| MATA-MATA |",
+        "BRUSQUE x CHAPECOENSE"
+    };
+
+    matrizGRUPOS[4][13] = {
+        "| FASE DE GRUPOS |",
+        "CARAVAGGIO x CHAPECOENSE",
+        "CARAVAGGIO x AVAÍ",
+        "CARAVAGGIO x HERCÍLIO LUZ",         // Jogos do CARAVAGGIO como mandante
+        "CARAVAGGIO x JOINVILLE",
+        "CARAVAGGIO x BARRA"
+    };
+
+    matrizGRUPOS[5][13] = {
+        "| FASE DE GRUPOS |",
+        "CHAPECOENSE x MARCÍLIO DIAS",
+        "CHAPECOENSE x AVAÍ",
+        "CHAPECOENSE x CRICIÚMA",         // Jogos do CHAPECOENSE como mandante
+        "CHAPECOENSE x SANTA CATARINA",
+        "CHAPECOENSE x JOINVILLE",
+        "| MATA-MATA |",
+        "CHAPECOENSE x JOINVILLE",
+        "CHAPECOENSE x AVAÍ"
+    };
+
+    matrizGRUPOS[6][13] = {
+        "| FASE DE GRUPOS |",
+        "CONCÓRDIA x BARRA",
+        "CONCÓRDIA x CHAPECOENSE",
+        "CONCÓRDIA x CARAVAGGIO",         // Jogos do CONCÓRDIA como mandante
+        "CONCÓRDIA x HERCÍLIO LUZ",
+        "CONCÓRDIA x BRUSQUE"
+    };
+
+    matrizGRUPOS[7][13] = {
+        "| FASE DE GRUPOS |",
+        "CRICIÚMA x CONCÓRDIA",
+        "CRICIÚMA x BARRA",
+        "CRICIÚMA x JOINVILLE",         // Jogos do CRICIÚMA como mandante
+        "CRICIÚMA x SANTA CATARINA",
+        "CRICIÚMA x CARAVAGGIO",
+        "CRICIÚMA x MARCÍLIO DIAS",
+        "| MATA-MATA |",
+        "CRICIÚMA x JOINVILLE"
+    };
+
+    matrizGRUPOS[8][13] = {
+        "| FASE DE GRUPOS |",
+        "FIGUEIRENSE x HERCÍLIO LUZ",
+        "FIGUEIRENSE x CRICIÚMA",
+        "FIGUEIRENSE x CONCÓRDIA",         // Jogos do FIGUEIRENSE como mandante
+        "FIGUEIRENSE x BRUSQUE",
+        "FIGUEIRENSE x CHAPECOENSE",
+        "FIGUEIRENSE x CARAVAGGIO"
+    };
+
+    matrizGRUPOS[9][13] = {
+        "| FASE DE GRUPOS |",
+        "HERCÍLIO LUZ x CRICIÚMA",
+        "HERCÍLIO LUZ x SANTA CATARINA",
+        "HERCÍLIO LUZ x AVAÍ",         // Jogos do HERCÍLIO LUZ como mandante
+        "HERCÍLIO LUZ x JOINVILLE",
+        "HERCÍLIO LUZ x CHAPECOENSE"
+    };
+
+    matrizGRUPOS[10][13] = {
+        "| FASE DE GRUPOS |",
+        "JOINVILLE x FIGUERENSE",
+        "JOINVILLE x CONCÓRDIA",
+        "JOINVILLE x BRUSQUE",         // Jogos do JOINVILLE como mandante
+        "JOINVILLE x MARCÍLIO DIAS",
+        "JOINVILLE x SANTA CATARINA"
+    };
+
+    matrizGRUPOS[11][13] = {
+        "| FASE DE GRUPOS |",
+        "MARCÍLIO DIAS x BRUSQUE",
+        "MARCÍLIO DIAS x HERCÍLIO LUZ",
+        "MARCÍLIO DIAS x CARAVAGGIO",         // Jogos do MARCÍLIO DIAS como mandante
+        "MARCÍLIO DIAS x CONCÓRDIA",
+        "MARCÍLIO DIAS x BARRA",
+        "MARCÍLIO DIAS x FIGUEIRENSE"
+    };
+
+     matrizGRUPOS[12][13] = {
+        "| FASE DE GRUPOS |",
+        "SANTA CATARINA x CARAVAGGIO",
+        "SANTA CATARINA x MARCÍLIO DIAS",
+        "SANTA CATARINA x FIGUERENSE",         // Jogos do SANTA CATARINA como mandante
+        "SANTA CATARINA x BRUSQUE",
+        "SANTA CATARINA x CONCÓRDIA",
+        "| MATA-MATA |",
+        "SANTA CATARINA x MARCÍLIO DIAS",
+        "SANTA CATARINA x AVAÍ",
+    };
+
+    // Se a posição não tiver jogos, retorna string vazia
+    if (matrizGRUPOS[a][b].empty()) return "";
+
+    string resultado;
+    for (const auto& jogo : matrizGRUPOS[a][b]) {
+        resultado += jogo + "\n";
+    }
+    return resultado;
+}
+
+
+
+
+
+
+
+
 bool idTime(string time, int i = 0){
 //verificar se o time esta no campeonato ou nao
     if(time == times[i]){
@@ -32,6 +181,9 @@ bool idTime(string time, int i = 0){
 }
 
 int main(){
+    cout << Jogos(1, 13);
+    cout << endl;
+    cout << Jogos(2, 13);
     vector<bool>verificartime = { true , true};
     int i;
     string time1,time2;
