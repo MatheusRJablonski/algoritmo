@@ -3,19 +3,19 @@
 using namespace std;
 
 vector<string> times = {
-        "Avai",
-        "Barra",
-        "Brusque",
-        "Caravaggio",
-        "Chapecoense",
-        "Concordia",
-        "Criciuma",
-        "Figueirense",
-        "Hercilio Luz",
-        "Joinville",
-        "Marcilio Dias",
-        "Santa Catarina",
-        "Nenhum"
+        "Avai", // 1
+        "Barra", // 2
+        "Brusque", // 3
+        "Caravaggio", // 4
+        "Chapecoense", // 5
+        "Concordia", // 6
+        "Criciuma", // 7
+        "Figueirense", // 8
+        "Hercilio Luz", // 9
+        "Joinville", // 10
+        "Marcilio Dias", // 11
+        "Santa Catarina", // 12
+        "Nenhum" // 13
     };
 
 bool idTime(string time, int i = 0){
