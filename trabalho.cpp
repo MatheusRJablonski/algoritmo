@@ -23,6 +23,8 @@ vector<string> times = {
 string Jogos(int a, int b) {
     vector<vector<vector<string>>> matrizGRUPOS(20, vector<vector<string>>(20));
 
+ //JOGOS COM O TIME MANDANTE
+
     matrizGRUPOS[1][13] = {
         "| FASE DE GRUPOS |",
         "AVAÍ x SANTA CATARINA",
@@ -147,7 +149,137 @@ string Jogos(int a, int b) {
         "SANTA CATARINA x CONCÓRDIA",
         "| MATA-MATA |",
         "SANTA CATARINA x MARCÍLIO DIAS",
+        "SANTA CATARINA x AVAÍ"
+    };
+
+
+  // JOGOS COM O TIME VISITANTE
+
+    
+        matrizGRUPOS[13][1] = {
+        "| FASE DE GRUPOS |",
+        "BRUSQUE x AVAÍ",
+        "CARAVAGGIO x AVAÍ",
+        "CHAPECOENSE x AVAÍ",                 // Jogos do AVAÍ como visitante
+        "HERCÍLIO LUZ x AVAÍ",
+        "BARRA x AVAÍ", 
+        "| MATA-MATA |",
         "SANTA CATARINA x AVAÍ",
+        "CHAPECOENSE x AVAÍ"
+    };
+
+    matrizGRUPOS[13][2] = {
+        "| FASE DE GRUPOS |",
+        "CONCÓRDIA x BARRA",
+        "CRICIÚMA x BARRA",
+        "BRUSQUE x BARRA",                 // Jogos do BARRA como visitante
+        "MARCÍLIO DIAS x BARRA",
+        "CARAVAGGIO x BARRA"
+    };
+
+    matrizGRUPOS[13][3] = {
+        "| FASE DE GRUPOS |",
+        "MARCÍLIO DIAS x BRUSQUE",
+        "JOINVILLE x BRUSQUE",
+        "SANTA CATARINA x BRUSQUE",           // Jogos do BRUSQUE como visitante
+        "CONCÓRDIA x BRUSQUE"
+    };
+
+    matrizGRUPOS[13][4] = {
+        "| FASE DE GRUPOS |",
+        "SANTA CATARINA x CARAVAGGIO",
+        "MARCÍLIO DIAS x CARAVAGGIO",
+        "BRUSQUE x CARAVAGGIO",         // Jogos do CARAVAGGIO como visitante
+        "CONCÓRDIA x CARAVAGGIO",
+        "CRICIÚMA x CARAVAGGIO",
+        "FIGUEIRENSE x CARAVAGGIO"
+    };
+
+    matrizGRUPOS[13][5] = {
+        "| FASE DE GRUPOS |",
+        "CARAVAGGIO x CHAPECOENSE",
+        "BRUSQUE x CHAPECOENSE",
+        "CONCÓRDIA x CHAPECOENSE",         // Jogos do CHAPECOENSE como visitante
+        "BARRA x CHAPECOENSE",
+        "FIGUEIRENSE x CHAPECOENSE",
+        "HERCÍLIO LUZ x CHAPECOENSE",
+        "| MATA-MATA |",
+        "BRUSQUE x CHAPECOENSE",
+        "AVAÍ x CHAPECOENSE"
+    };
+
+    matrizGRUPOS[13][6] = {
+        "| FASE DE GRUPOS |",
+        "CRICIÚMA x CONCÓRDIA",
+        "JOINVILLE x CONCÓRDIA",
+        "FIGUEIRENSE x CONCÓRDIA",         // Jogos do CONCÓRDIA como visitante
+        "MARCÍLIO DIAS x CONCÓRDIA",
+        "AVAÍ x CONCÓRDIA",
+        "SANTA CATARINA x CONCÓRDIA"
+    };
+
+    matrizGRUPOS[13][7] = {
+        "| FASE DE GRUPOS |",
+        "HERCÍLIO LUZ x CRICIÚMA",
+        "FIGUEIRENSE x CRICIÚMA",
+        "CHAPECOENSE x CRICIÚMA",         // Jogos do CRICIÚMA como visitante
+        "BRUSQUE x CRICIÚMA",
+        "AVAÍ x CRICIÚMA" 
+    };
+
+    matrizGRUPOS[13][8] = {
+        "| FASE DE GRUPOS |",
+        "BARRA x FIGUEIRENSE",
+        "MARCÍLIO DIAS x FIGUEIRENSE",
+        "JOINVILLE x FIGUEIRENSE",         // Jogos do FIGUEIRENSE como visitante
+        "AVAÍ x FIGUEIRENSE",
+        "SANTA CATARINA x FIGUEIRENSE",
+        "| MATA-MATA |",
+        "AVAÍ x FIGUEIRENSE"
+    };
+
+    matrizGRUPOS[13][9] = {
+        "| FASE DE GRUPOS |",
+        "FIGUEIRENSE x HERCÍLIO LUZ",
+        "MARCÍLIO DIAS x HERCÍLIO LUZ",
+        "BARRA x HERCÍLIO LUZ",         // Jogos do HERCÍLIO LUZ como visitante
+        "CARAVAGGIO x HERCÍLIO LUZ",
+        "CONCÓRDIA x HERCÍLIO LUZ",
+        "BRUSQUE x HERCÍLIO LUZ"
+    };
+
+    matrizGRUPOS[13][10] = {
+        "| FASE DE GRUPOS |",
+        "BARRA x JOINVILLE",
+        "CRÍCIUMA x JOINVILLE",
+        "AVAÍ x JOINVILLE",         // Jogos do JOINVILLE como visitante
+        "CARAVAGGIO x JOINVILLE",
+        "HERCÍLIO LUZ x JOINVILLE",
+        "CHAPECOENSE x JOINVILLE",
+        "| MATA-MATA |",
+        "CRICIÚMA x JOINVILLE",
+        "CHAPECOENSE x JOINVILLE"
+    };
+
+    matrizGRUPOS[13][11] = {
+        "| FASE DE GRUPOS |",
+        "CHAPECOENSE x MARCÍLIO DIAS",
+        "SANTA CATARINA x MARCÍLIO DIAS",
+        "JOINVILLE x MARCÍLIO DIAS",         // Jogos do MARCÍLIO DIAS como visitante
+        "AVAÍ x MARCÍLIO DIAS",
+        "CRICIÚMA x MARCÍLIO DIAS",
+        "| MATA-MATA |",
+        "SANTA CATARINA x MARCÍLIO DIAS"
+    };
+
+     matrizGRUPOS[13][12] = {
+        "| FASE DE GRUPOS |",
+        "AVAÍ x SANTA CATARINA",
+        "BARRA x SANTA CATARINA",
+        "HERCÍLIO LUZ x SANTA CATARINA",         // Jogos do SANTA CATARINA como visitante
+        "CRICIÚMA x SANTA CATARINA",
+        "CHAPECOENSE x SANTA CATARINA",
+        "JOINVILLE x SANTA CATARINA"
     };
 
     // Se a posição não tiver jogos, retorna string vazia
