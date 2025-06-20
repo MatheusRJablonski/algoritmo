@@ -20,7 +20,7 @@ vector<string> times = {
 
 
 
-string Jogos(int a, int b) {
+string JogosGrupos(int a, int b) {
     vector<vector<vector<string>>> matrizGRUPOS(20, vector<vector<string>>(20));
 
  //JOGOS COM O TIME MANDANTE
@@ -565,11 +565,540 @@ string Jogos(int a, int b) {
         "ESTÁDIO: Estádio da Montanha"
     };
 
+    matrizGRUPOS[5][11] = {
+        "JOGO: CHAPECOENSE x MARCÍLIO DIAS",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Segunda Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 19/01/2025",
+        "HORÁRIO: 16:00",
+        "ESTÁDIO: Estádio Municipal Josué Annoni"
+    };
 
 
+    matrizGRUPOS[5][1] = {
+        "JOGO: CHAPECOENSE x AVAÍ",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Quinta Rodada",
+        "CARTOES AMARELOS: 3",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 29/01/2025",
+        "HORÁRIO: 20:30",
+        "ESTÁDIO: Estádio Municipal Josué Annoni"
+    };
 
-    // Se a posição não tiver jogos, retorna string vazia
-    if (matrizGRUPOS[a][b].empty()) return "";
+
+    matrizGRUPOS[5][7] = {
+        "JOGO: CHAPECOENSE x CRICIÚMA",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Sexta Rodada",
+        "CARTOES AMARELOS: 0",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 01/02/2025",
+        "HORÁRIO: 16:00",
+        "ESTÁDIO: Estádio Municipal Josué Annoni"
+    };
+
+
+    matrizGRUPOS[5][12] = {
+        "JOGO: CHAPECOENSE x SANTA CATARINA",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Oitava Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 09/02/2025",
+        "HORÁRIO: 17:00",
+        "ESTÁDIO: Estádio Municipal Josué Annoni"
+    };
+
+
+    matrizGRUPOS[5][10] = {
+        "JOGO: CHAPECOENSE x JOINVILLE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Décima Primeira Rodada",
+        "CARTOES AMARELOS: 1",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio Municipal Josué Annoni"
+    };  
+
+
+    matrizGRUPOS[6][2] = {
+        "JOGO: CONCÓRDIA x BARRA",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Primeira Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 15/01/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio Domingos Machado De Lima"
+    };  
+
+    matrizGRUPOS[6][5] = {
+        "JOGO: CONCÓRDIA x CHAPECOENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 1",
+        "RODADA: Quarta Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 26/01/2025",
+        "HORÁRIO: 18:00",
+        "ESTÁDIO: Estádio Domingos Machado De Lima"
+    };
+
+
+    matrizGRUPOS[6][4] = {
+        "JOGO: CONCÓRDIA x CARAVAGGIO",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 0",
+        "RODADA: Sétima Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 06/02/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio Domingos Machado De Lima"
+    };
+
+
+    matrizGRUPOS[6][9] = {
+        "JOGO: CONCÓRDIA x HERCÍLIO LUZ",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Oitava Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 09/02/2025",
+        "HORÁRIO: 17:00",
+        "ESTÁDIO: Estádio Domingos Machado De Lima"
+    };
+
+
+    matrizGRUPOS[6][3] = {
+        "JOGO: CONCÓRDIA x BRUSQUE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 4",
+        "RODADA: Décima Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 16/02/2025",
+        "HORÁRIO: 18:00",
+        "ESTÁDIO: Estádio Domingos Machado De Lima"
+    };
+
+    matrizGRUPOS[7][6] = {
+        "JOGO: CRICIÚMA x CONCÓRDIA",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 0",
+        "RODADA: Segunda Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 19/01/2025",
+        "HORÁRIO: 16:00",
+        "ESTÁDIO: Estádio Heriberto Hulse"
+    };
+
+    matrizGRUPOS[7][2] = {
+        "JOGO: CRICIÚMA x BARRA",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Quarta Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 26/01/2025",
+        "HORÁRIO: 18:30",
+        "ESTÁDIO: Estádio Heriberto Hulse"
+    };
+
+
+    matrizGRUPOS[7][10] = {
+        "JOGO: CRICIÚMA x JOINVILLE",
+        "FASE: GRUPOS",
+        "PLACAR: 3 x 0",
+        "RODADA: Quinta Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 29/01/2025",
+        "HORÁRIO: 21:00",
+        "ESTÁDIO: Estádio Heriberto Hulse"
+    };
+
+
+    matrizGRUPOS[7][12] = {
+        "JOGO: CRICIÚMA x SANTA CATARINA",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Sétima Rodada",
+        "CARTOES AMARELOS: 1",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 05/02/2025",
+        "HORÁRIO: 21:00",
+        "ESTÁDIO: Estádio Heriberto Hulse"
+    };
+
+    matrizGRUPOS[7][4] = {
+        "JOGO: CRICIÚMA x CARAVAGGIO",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 2",
+        "RODADA: Nona Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 2",
+        "DATA: 12/02/2025",
+        "HORÁRIO: 20:30",
+        "ESTÁDIO: Estádio Heriberto Hulse"
+    };
+
+
+    matrizGRUPOS[7][11] = {
+        "JOGO: CRICIÚMA x MARCÍLIO DIAS",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Décima Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 15/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio Heriberto Hulse"
+    };
+
+
+    matrizGRUPOS[8][9] = {
+        "JOGO: FIGUEIRENSE x HERCÍLIO LUZ",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Segunda Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 18/01/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio Orlando Scarpelli"
+    };
+
+    matrizGRUPOS[8][7] = {
+        "JOGO: FIGUEIRENSE x CRICIÚMA",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 3",
+        "RODADA: Terceira Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/01/2025",
+        "HORÁRIO: 21:00",
+        "ESTÁDIO: Estádio Orlando Scarpelli"
+    };
+
+    matrizGRUPOS[8][6] = {
+        "JOGO: FIGUEIRENSE x CONCÓRDIA",
+        "FASE: GRUPOS",
+        "PLACAR: 4 x 1",
+        "RODADA: Quinta Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 29/01/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio Orlando Scarpelli"
+    };
+
+    matrizGRUPOS[8][3] = {
+        "JOGO: FIGUEIRENSE x BRUSQUE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Sétima Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 05/02/2025",
+        "HORÁRIO: 20:00",
+        "ESTÁDIO: Estádio Orlando Scarpelli"
+    };
+
+
+    matrizGRUPOS[8][5] = {
+        "JOGO: FIGUEIRENSE x CHAPECOENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 4",
+        "RODADA: Nona Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 13/02/2025",
+        "HORÁRIO: 20:30",
+        "ESTÁDIO: Estádio Orlando Scarpelli"
+    };
+
+    matrizGRUPOS[8][4] = {
+        "JOGO: FIGUEIRENSE x CARAVAGGIO",
+        "FASE: GRUPOS",
+        "PLACAR: 5 x 1",
+        "RODADA: Décima Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 16/02/2025",
+        "HORÁRIO: 18:30",
+        "ESTÁDIO: Estádio Orlando Scarpelli"
+    };
+
+    matrizGRUPOS[9][7] = {
+        "JOGO: HERCÍLIO LUZ x CRICIÚMA",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 1",
+        "RODADA: Primeira Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 1",
+        "DATA: 19/02/2025",
+        "HORÁRIO: 20:30",
+        "ESTÁDIO: Estádio Anibal Torres Costa"
+    };
+
+    matrizGRUPOS[9][12] = {
+        "JOGO: HERCÍLIO LUZ x SANTA CATARINA",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 1",
+        "RODADA: Quarta Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 26/01/2025",
+        "HORÁRIO: 17:00",
+        "ESTÁDIO: Estádio Anibal Torres Costa"
+    };
+
+
+    matrizGRUPOS[9][1] = {
+        "JOGO: HERCÍLIO LUZ x AVAÍ",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 3",
+        "RODADA: Sétima Rodada",
+        "CARTOES AMARELOS: 8",
+        "CARTOES VERMELHOS: 1",
+        "DATA: 05/02/2025",
+        "HORÁRIO: 20:30",
+        "ESTÁDIO: Estádio Anibal Torres Costa"
+    };
+
+    matrizGRUPOS[9][10] = {
+        "JOGO: HERCÍLIO LUZ x JOINVILLE",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 1",
+        "RODADA: Nona Rodada",
+        "CARTOES AMARELOS: 9",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 13/02/2025",
+        "HORÁRIO: 20:00",
+        "ESTÁDIO: Estádio Anibal Torres Costa"
+    };
+
+    matrizGRUPOS[9][5] = {
+        "JOGO: HERCÍLIO LUZ x CHAPECOENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 2",
+        "RODADA: Décima Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 16/02/2025",
+        "HORÁRIO: 17:00",
+        "ESTÁDIO: Estádio Anibal Torres Costa"
+    };
+
+    matrizGRUPOS[10][8] = {
+        "JOGO: JOINVILLE x FIGUEIRENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Primeira Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 11/01/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Arena Joinville"
+    };
+
+    matrizGRUPOS[10][6] = {
+        "JOGO: JOINVILLE x CONCÓRDIA",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 1",
+        "RODADA: Terceira Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/01/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Arena Joinville"
+    };
+
+    matrizGRUPOS[10][3] = {
+        "JOGO: JOINVILLE x BRUSQUE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Quarta Rodada",
+        "CARTOES AMARELOS: 3",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 25/01/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Arena Joinville"
+    };
+
+    matrizGRUPOS[10][11] = {
+        "JOGO: JOINVILLE x MARCÍLIO DIAS",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Sétima Rodada",
+        "CARTOES AMARELOS: 8",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 06/02/2025",
+        "HORÁRIO: 20:00",
+        "ESTÁDIO: Arena Joinville"
+    };
+
+    matrizGRUPOS[10][12] = {
+        "JOGO: JOINVILLE x SANTA CATARINA",
+        "FASE: GRUPOS",
+        "PLACAR: 4 x 3",
+        "RODADA: Décima Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 16/02/2025",
+        "HORÁRIO: 18:00",
+        "ESTÁDIO: Arena Joinville"
+    };
+
+
+    matrizGRUPOS[11][3] = {
+        "JOGO: MARCÍLIO DIAS x BRUSQUE",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Primeira Rodada",
+        "CARTOES AMARELOS: 8",
+        "CARTOES VERMELHOS: 1",
+        "DATA: 15/01/2025",
+        "HORÁRIO: 20:00",
+        "ESTÁDIO: Estádio Dr. Hercílio Luz"
+    };
+
+    matrizGRUPOS[11][9] = {
+        "JOGO: MARCÍLIO DIAS x HERCÍLIO LUZ",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Terceira Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 1",
+        "DATA: 23/01/2025",
+        "HORÁRIO: 21:00",
+        "ESTÁDIO: Estádio Dr. Hercílio Luz"
+    };
+
+    matrizGRUPOS[11][4] = {
+        "JOGO: MARCÍLIO DIAS x CARAVAGGIO",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Quarta Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 26/01/2025",
+        "HORÁRIO: 17:30",
+        "ESTÁDIO: Estádio Dr. Hercílio Luz"
+    };
+
+    matrizGRUPOS[11][6] = {
+        "JOGO: MARCÍLIO DIAS x CONCÓRDIA",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Sexta Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 02/02/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio Dr. Hercílio Luz"
+    };
+
+    matrizGRUPOS[11][2] = {
+        "JOGO: MARCÍLIO DIAS x BARRA",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 0",
+        "RODADA: Nona Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 12/02/2025",
+        "HORÁRIO: 20:30",
+        "ESTÁDIO: Estádio Dr. Hercílio Luz"
+    };
+
+    matrizGRUPOS[11][8] = {
+        "JOGO: MARCÍLIO DIAS x FIGUEIRENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 1",
+        "RODADA: Décima Primeira Rodada",
+        "CARTOES AMARELOS: 3",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio Dr. Hercílio Luz"
+    };
+
+    matrizGRUPOS[12][4] = {
+        "JOGO: SANTA CATARINA x CARAVAGGIO",
+        "FASE: GRUPOS",
+        "PLACAR: 3 x 1",
+        "RODADA: Segunda Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 19/01/2025",
+        "HORÁRIO: 16:00",
+        "ESTÁDIO: Estádio Municipal Alfredo João Krieck"
+    };
+
+    matrizGRUPOS[12][11] = {
+        "JOGO: SANTA CATARINA x MARCÍLIO DIAS",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 1",
+        "RODADA: Quinta Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 30/01/2025",
+        "HORÁRIO: 20:00",
+        "ESTÁDIO: Estádio Municipal Alfredo João Krieck"
+    };
+
+    matrizGRUPOS[12][8] = {
+        "JOGO: SANTA CATARINA x FIGUEIRENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 2",
+        "RODADA: Sexta Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 2",
+        "DATA: 02/02/2025",
+        "HORÁRIO: 17:00",
+        "ESTÁDIO: Estádio Municipal Alfredo João Krieck"
+    };
+
+    matrizGRUPOS[12][3] = {
+        "JOGO: SANTA CATARINA x BRUSQUE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Nona Rodada",
+        "CARTOES AMARELOS: 8",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 12/02/2025",
+        "HORÁRIO: 20:00",
+        "ESTÁDIO: Estádio Municipal Alfredo João Krieck"
+    };
+
+    matrizGRUPOS[12][6] = {
+        "JOGO: SANTA CATARINA x CONCÓRDIA",
+        "FASE: GRUPOS",
+        "PLACAR: 3 x 0",
+        "RODADA: Décima Primeira Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio Municipal Alfredo João Krieck"
+    };
+
+
+    // Se a posição não tiver jogos, retorna string que nao tem
+    if (matrizGRUPOS[a][b].empty()) return "Esse jogo não existe";
 
     string resultado;
     for (const auto& jogo : matrizGRUPOS[a][b]) {
@@ -599,9 +1128,9 @@ bool idTime(string time, int i = 0){
 }
 
 int main(){
-    cout << Jogos(1, 13);
+    cout << JogosGrupos(1, 13);
     cout << endl;
-    cout << Jogos(2, 13);
+    cout << JogosGrupos(2, 13);
     vector<bool>verificartime = { true , true};
     int i;
     string time1,time2;
