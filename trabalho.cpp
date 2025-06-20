@@ -272,7 +272,7 @@ string Jogos(int a, int b) {
         "SANTA CATARINA x MARCÍLIO DIAS"
     };
 
-     matrizGRUPOS[13][12] = {
+    matrizGRUPOS[13][12] = {
         "| FASE DE GRUPOS |",
         "AVAÍ x SANTA CATARINA",
         "BARRA x SANTA CATARINA",
@@ -281,6 +281,230 @@ string Jogos(int a, int b) {
         "CHAPECOENSE x SANTA CATARINA",
         "JOINVILLE x SANTA CATARINA"
     };
+
+
+    //JOGOS DAS FASES DE GRUPOS
+
+    matrizGRUPOS[1][12] = {
+        "JOGO: AVAÍ x SANTA CATARINA",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Primeira Rodada",
+        "CARTOES AMARELOS: 8",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 15/01/2025",
+        "HORÁRIO: 20:30",
+        "ESTÁDIO: Estádio da Ressacada"
+    };
+
+    matrizGRUPOS[1][8] = {
+        "JOGO: AVAÍ x FIGUEIRENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 1",
+        "RODADA: Quarta Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 1",
+        "DATA: 25/01/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio da Ressacada"
+    };
+
+    matrizGRUPOS[1][10] = {
+        "JOGO: AVAÍ x JOINVILLE",
+        "FASE: GRUPOS",
+        "PLACAR: 3 x 0",
+        "RODADA: Sexta Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 01/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio da Ressacada"
+    };
+
+    matrizGRUPOS[1][11] = {
+        "JOGO: AVAÍ x MARCÍLIO DIAS",
+        "FASE: GRUPOS",
+        "PLACAR: 3 x 0",
+        "RODADA: Oitava Rodada",
+        "CARTOES AMARELOS: 3",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 09/02/2025",
+        "HORÁRIO: 18:00",
+        "ESTÁDIO: Estádio da Ressacada"
+    };
+
+    matrizGRUPOS[1][6] = {
+        "JOGO: AVAÍ x CONCÓRDIA",
+        "FASE: GRUPOS",
+        "PLACAR: 3 x 1",
+        "RODADA: Nona Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 12/02/2025",
+        "HORÁRIO: 21:00",
+        "ESTÁDIO: Estádio da Ressacada"
+    };
+
+    matrizGRUPOS[1][7] = {
+        "JOGO: AVAÍ x CRICIÚMA",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 3",
+        "RODADA: Décima Primeira Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio da Ressacada"
+    };
+
+    matrizGRUPOS[2][10] = {
+        "JOGO: BARRA x JOINVILLE",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Segunda Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 19/01/2025",
+        "HORÁRIO: 18:15",
+        "ESTÁDIO: Arena Barra Futebol Clube"
+    };
+
+    matrizGRUPOS[2][12] = {
+        "JOGO: BARRA x SANTA CATARINA",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 2",
+        "RODADA: Terceira Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 1",
+        "DATA: 23/01/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Arena Barra Futebol Clube"
+    };
+
+    matrizGRUPOS[2][9] = {
+        "JOGO: BARRA x HERCÍLIO LUZ",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Quinta Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 29/01/2025",
+        "HORÁRIO: 19:30",
+        "ESTÁDIO: Arena Barra Futebol Clube"
+    };
+
+    matrizGRUPOS[2][5] = {
+        "JOGO: BARRA x CHAPECOENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Sétima Rodada",
+        "CARTOES AMARELOS: 3",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 05/02/2025",
+        "HORÁRIO: 19:30",
+        "ESTÁDIO: Arena Barra Futebol Clube"
+    };
+
+    matrizGRUPOS[2][8] = {
+        "JOGO: BARRA x FIGUEIRENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Oitava Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 08/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Arena Barra Futebol Clube"
+    };
+
+    matrizGRUPOS[2][1] = {
+        "JOGO: BARRA x AVAÍ",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Décima Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 15/02/2025",
+        "HORÁRIO: 18:00",
+        "ESTÁDIO: Arena Barra Futebol Clube"
+    };
+
+    matrizGRUPOS[3][1] = {
+        "JOGO: BRUSQUE x AVAÍ",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Segunda Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 18/01/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio Augusto Bauer"
+    };
+
+
+    matrizGRUPOS[3][5] = {
+        "JOGO: BRUSQUE x CHAPECOENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 2",
+        "RODADA: Terceira Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/01/2025",
+        "HORÁRIO: 19:30",
+        "ESTÁDIO: Estádio Augusto Bauer"
+    };
+
+    matrizGRUPOS[3][4] = {
+        "JOGO: BRUSQUE x CARAVAGGIO",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Quinta Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 29/01/2025",
+        "HORÁRIO: 20:00",
+        "ESTÁDIO: Estádio Augusto Bauer"
+    };
+
+
+    matrizGRUPOS[3][2] = {
+        "JOGO: BRUSQUE x BARRA",
+        "FASE: GRUPOS",
+        "PLACAR: 2 x 0",
+        "RODADA: Sexta Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 01/02/2025",
+        "HORÁRIO: 18:00",
+        "ESTÁDIO: Estádio Augusto Bauer"
+    };
+
+    matrizGRUPOS[3][7] = {
+        "JOGO: BRUSQUE x CRICIÚMA",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Oitava Rodada",
+        "CARTOES AMARELOS: 1",
+        "CARTOES VERMELHOS: 1",
+        "DATA: 08/02/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio Augusto Bauer"
+    };
+
+    matrizGRUPOS[3][9] = {
+        "JOGO: BRUSQUE x HERCÍLIO LUZ",
+        "FASE: GRUPOS",
+        "PLACAR: 3 x 1",
+        "RODADA: Décima Primeira Rodada",
+        "CARTOES AMARELOS: 2",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio Augusto Bauer"
+    };
+
+
+
 
     // Se a posição não tiver jogos, retorna string vazia
     if (matrizGRUPOS[a][b].empty()) return "";
