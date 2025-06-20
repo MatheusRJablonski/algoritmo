@@ -504,6 +504,68 @@ string Jogos(int a, int b) {
     };
 
 
+    matrizGRUPOS[4][5] = {
+        "JOGO: CARAVAGGIO x CHAPECOENSE",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 1",
+        "RODADA: Primeira Rodada",
+        "CARTOES AMARELOS: 7",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 15/01/2025",
+        "HORÁRIO: 19:30",
+        "ESTÁDIO: Estádio da Montanha"
+    };
+
+
+    matrizGRUPOS[4][1] = {
+        "JOGO: CARAVAGGIO x AVAÍ",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Terceira Rodada",
+        "CARTOES AMARELOS: 5",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/01/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio da Montanha"
+    };
+
+    matrizGRUPOS[4][9] = {
+        "JOGO: CARAVAGGIO x HERCÍLIO LUZ",
+        "FASE: GRUPOS",
+        "PLACAR: 1 x 0",
+        "RODADA: Sexta Rodada",
+        "CARTOES AMARELOS: 4",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 02/02/2025",
+        "HORÁRIO: 18:30",
+        "ESTÁDIO: Estádio da Montanha"
+    };
+
+    matrizGRUPOS[4][10] = {
+        "JOGO: CARAVAGGIO x JOINVILLE",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 1",
+        "RODADA: Oitava Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 09/02/2025",
+        "HORÁRIO: 19:00",
+        "ESTÁDIO: Estádio da Montanha"
+    };
+
+    matrizGRUPOS[4][2] = {
+        "JOGO: CARAVAGGIO x BARRA",
+        "FASE: GRUPOS",
+        "PLACAR: 0 x 0",
+        "RODADA: Décima Primeira Rodada",
+        "CARTOES AMARELOS: 6",
+        "CARTOES VERMELHOS: 0",
+        "DATA: 22/02/2025",
+        "HORÁRIO: 16:30",
+        "ESTÁDIO: Estádio da Montanha"
+    };
+
+
 
 
     // Se a posição não tiver jogos, retorna string vazia
