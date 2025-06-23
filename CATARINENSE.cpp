@@ -1222,44 +1222,11 @@ string JogosMata(int a, int b) {
 }
 
 
-int main(){
-  
-    cout << endl;
-    
-    int i;
-    
+int valorTime1(string time1){
 
-    cout << "Esses são os times disponíveis, se quiser verificar os jogos de algum time específico digite o time e nenhum. Lembre-se de digitar de acordo com o nome dos times acima" << endl;
+    int time1Int;
 
-    for(i = 0;i < times.size();i++){ // escrever os times na tela
-    cout << times[i] << endl;
-    }
-
-    cout << endl;
-
-    cout << "Digite a quantidade de jogos que você quer visualizar" << endl;
-    int nJogos; cin >> nJogos;
-        
-
-    while(nJogos--){
-        cout << endl;
-        
-        string fase;
-        int time1Int, time2Int;
-        string time1, time2;
-
-        cout << "Digite a fase que você quer visualizar (Grupos ou Mata-Mata)" << endl;
-        cin >> fase;
-
-        cout << "Qual seu primeiro time:  (Caso o time tenha dois nomes siga o exemplo: SantaCatarina)" << endl;
-        cin >> time1;
-
-        cout << "Qual o seu segundo time: (Caso o time tenha dois nomes siga o exemplo: SantaCatarina)" << endl;
-        cin >> time2;
-
-        cout << endl;
-            
-        if(time1 == "Avai"){
+    if(time1 == "Avai"){
             time1Int = 1;
         }
         else if(time1 == "Barra"){
@@ -1302,8 +1269,15 @@ int main(){
             time1Int = 20;  // Valor aleatório para cair na condicao de time inesxistente
         }
 
+        return time1Int;
+ 
+}
 
-        if(time2 == "Avai"){
+int valorTime2(string time2){
+
+    int time2Int;
+
+           if(time2 == "Avai"){
             time2Int = 1;
         }
         else if(time2 == "Barra"){
@@ -1345,6 +1319,52 @@ int main(){
         else{
             time2Int = 20;  // Valor aleatório para cair na condicao de time inesxistente
         }
+
+        return time2Int;
+}
+
+int main(){
+  
+    cout << endl;
+    
+    int i;
+    
+
+    cout << "Esses são os times disponíveis, se quiser verificar os jogos de algum time específico digite o time e nenhum. Lembre-se de digitar de acordo com o nome dos times acima" << endl;
+
+    for(i = 0;i < times.size();i++){ // escrever os times na tela
+    cout << times[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << "Digite a quantidade de jogos que você quer visualizar" << endl;
+    int nJogos; cin >> nJogos;
+        
+
+    while(nJogos--){
+        cout << endl;
+        
+        string fase;
+        int time1Int, time2Int;
+        string time1, time2;
+
+        cout << "Digite a fase que você quer visualizar (Grupos ou Mata-Mata)" << endl;
+        cin >> fase;
+
+        cout << "Qual seu primeiro time:  (Caso o time tenha dois nomes siga o exemplo: SantaCatarina)" << endl;
+        cin >> time1;
+
+        cout << "Qual o seu segundo time: (Caso o time tenha dois nomes siga o exemplo: SantaCatarina)" << endl;
+        cin >> time2;
+
+        cout << endl;
+
+        time1Int = valorTime1(time1);
+        time2Int = valorTime2(time2);
+
+            
+        
 
 
         if(time1Int == 20 || time2Int == 20){
