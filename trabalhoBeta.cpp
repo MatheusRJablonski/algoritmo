@@ -1095,122 +1095,109 @@ string buscarJogos(int a, int b) {
 
 
 string jogosMata(int a, int b) {
-    vector<vector<vector<string>>> matrizMatas(20, vector<vector<string>>(20));
+    vector<vector<string>> jogosMataMata(20, vector<string>(20));
 
-    matrizMatas[3][5] = {
-        "JOGO: BRUSQUE x CHAPECOENSE",
-        "FASE: MATA-MATA",
-        "PLACAR: 0 (4) x 0 (5)",
-        "RODADA: Quartas de final",
-        "CARTOES AMARELOS: 8",
-        "CARTOES VERMELHOS: 0",
-        "DATA: 01/03/2025",
-        "HORÁRIO: 18:30",
-        "ESTÁDIO: Estádio Augusto Bauer"
-    };
+jogosMataMata[3][5] =
+    "JOGO: BRUSQUE x CHAPECOENSE\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 0 (4) x 0 (5)\n"
+    "RODADA: Quartas de final\n"
+    "CARTOES AMARELOS: 8\n"
+    "CARTOES VERMELHOS: 0\n"
+    "DATA: 01/03/2025\n"
+    "HORÁRIO: 18:30\n"
+    "ESTÁDIO: Estádio Augusto Bauer";
 
+jogosMataMata[7][10] =
+    "JOGO: CRICIÚMA x JOINVILLE\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 0 (7) x 0 (8)\n"
+    "RODADA: Quartas de final\n"
+    "CARTOES AMARELOS: 6\n"
+    "CARTOES VERMELHOS: 0\n"
+    "DATA: 02/03/2025\n"
+    "HORÁRIO: 19:00\n"
+    "ESTÁDIO: Estádio Heriberto Hülse";
 
-    matrizMatas[7][10] = {
-        "JOGO: CRICIÚMA x JOINVILLE",
-        "FASE: MATA-MATA",
-        "PLACAR: 0 (7) x 0 (8)",
-        "RODADA: Quartas de final",
-        "CARTOES AMARELOS: 6",
-        "CARTOES VERMELHOS: 0",
-        "DATA: 02/03/2025",
-        "HORÁRIO: 19:00",
-        "ESTÁDIO: Estádio Heriberto Hülse"
-    };
+jogosMataMata[12][11] =
+    "JOGO: SANTA CATARINA x MARCÍLIO DIAS\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 2 x 0\n"
+    "RODADA: Quartas de final\n"
+    "CARTOES AMARELOS: 9\n"
+    "CARTOES VERMELHOS: 1\n"
+    "DATA: 04/03/2025\n"
+    "HORÁRIO: 20:30\n"
+    "ESTÁDIO: Estádio Municipal Alfredo João Krieck";
 
-    matrizMatas[12][11] = {
-        "JOGO: SANTA CATARINA x MARCÍLIO DIAS",
-        "FASE: MATA-MATA",
-        "PLACAR: 2 x 0",
-        "RODADA: Quartas de final",
-        "CARTOES AMARELOS: 9",
-        "CARTOES VERMELHOS: 1",
-        "DATA: 04/03/2025",
-        "HORÁRIO: 20:30",
-        "ESTÁDIO: Estádio Municipal Alfredo João Krieck"
-    };
+jogosMataMata[1][8] =
+    "JOGO: AVAÍ x FIGUEIRENSE\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 1 (4) x 1 (2)\n"
+    "RODADA: Quartas de final\n"
+    "CARTOES AMARELOS: 2\n"
+    "CARTOES VERMELHOS: 0\n"
+    "DATA: 05/03/2025\n"
+    "HORÁRIO: 21:30\n"
+    "ESTÁDIO: Estádio da Ressacada";
 
-    matrizMatas[1][8] = {
-        "JOGO: AVAÍ x FIGUEIRENSE",
-        "FASE: MATA-MATA",
-        "PLACAR: 1 (4) x 1 (2)",
-        "RODADA: Quartas de final",
-        "CARTOES AMARELOS: 2",
-        "CARTOES VERMELHOS: 0",
-        "DATA: 05/03/2025",
-        "HORÁRIO: 21:30",
-        "ESTÁDIO: Estádio da Ressacada"
-    };
+jogosMataMata[12][1] =
+    "JOGO: SANTA CATARINA x AVAÍ\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 1 (7) x 1 (8)\n"
+    "RODADA: Semifinal\n"
+    "CARTOES AMARELOS: 2\n"
+    "CARTOES VERMELHOS: 0\n"
+    "DATA: 08/03/2025\n"
+    "HORÁRIO: 17:45\n"
+    "ESTÁDIO: Estádio Municipal Alfredo João Krieck";
 
-    matrizMatas[12][1] = {
-        "JOGO: SANTA CATARINA x AVAÍ",
-        "FASE: MATA-MATA",
-        "PLACAR: 1 (7) x 1 (8)",
-        "RODADA: Semifinal",
-        "CARTOES AMARELOS: 2",
-        "CARTOES VERMELHOS: 0",
-        "DATA: 08/03/2025",
-        "HORÁRIO: 17:45",
-        "ESTÁDIO: Estádio Municipal Alfredo João Krieck"
-    };
+jogosMataMata[5][10] =
+    "JOGO: CHAPECOENSE x JOINVILLE\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 2 x 1\n"
+    "RODADA: Semifinal\n"
+    "CARTOES AMARELOS: 12\n"
+    "CARTOES VERMELHOS: 0\n"
+    "DATA: 09/03/2025\n"
+    "HORÁRIO: 17:00\n"
+    "ESTÁDIO: Estádio Municipal Josué Annoni";
 
-    matrizMatas[5][10] = {
-        "JOGO: CHAPECOENSE x JOINVILLE",
-        "FASE: MATA-MATA",
-        "PLACAR: 2 x 1",
-        "RODADA: Semifinal",
-        "CARTOES AMARELOS: 12",
-        "CARTOES VERMELHOS: 0",
-        "DATA: 09/03/2025",
-        "HORÁRIO: 17:00",
-        "ESTÁDIO: Estádio Municipal Josué Annoni"
-    };
+jogosMataMata[5][1] =
+    "JOGO: CHAPECOENSE x AVAÍ\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 2 x 2\n"
+    "RODADA: Final, Jogo 1\n"
+    "CARTOES AMARELOS: 0\n"
+    "CARTOES VERMELHOS: 0\n"
+    "DATA: 15/03/2025\n"
+    "HORÁRIO: 16:30\n"
+    "ESTÁDIO: Estádio Municipal Josué Annoni";
 
-    matrizMatas[5][1] = {
-        "JOGO: CHAPECOENSE x AVAÍ",
-        "FASE: MATA-MATA",
-        "PLACAR: 2 x 2",
-        "RODADA: Final, Jogo 1",
-        "CARTOES AMARELOS: 0",
-        "CARTOES VERMELHOS: 0",
-        "DATA: 15/03/2025",
-        "HORÁRIO: 16:30",
-        "ESTÁDIO: Estádio Municipal Josué Annoni"
-    };
-
-    matrizMatas[1][5] = {
-        "JOGO: AVAÍ x CHAPECOENSE",
-        "FASE: MATA-MATA",
-        "PLACAR: 1 x 1 (AVAI CAMPEAO)",
-        "RODADA: Final, Jogo 2",
-        "CARTOES AMARELOS: 12",
-        "CARTOES VERMELHOS: 4",
-        "DATA: 22/03/2025",
-        "HORÁRIO: 16:30",
-        "ESTÁDIO: Estádio da Ressacada"
-    };
+jogosMataMata[1][5] =
+    "JOGO: AVAÍ x CHAPECOENSE\n"
+    "FASE: MATA-MATA\n"
+    "PLACAR: 1 x 1 (AVAI CAMPEAO)\n"
+    "RODADA: Final, Jogo 2\n"
+    "CARTOES AMARELOS: 12\n"
+    "CARTOES VERMELHOS: 4\n"
+    "DATA: 22/03/2025\n"
+    "HORÁRIO: 16:30\n"
+    "ESTÁDIO: Estádio da Ressacada";
 
 
 
     // Se a posição não tiver jogos, retorna string que nao tem
-    if (matrizMatas[a][b].empty()) return "Esse jogo não existe";
+    if (jogosMataMata[a][b].empty()) return "Esse jogo não existe";
 
     string resultado;
-    for (const auto& jogo : matrizMatas[a][b]) {
+    for (const auto& jogo : jogosMataMata[a][b]) {
         resultado += jogo + "\n";
     }
     return resultado;
     
     
 }
-
-
-
-
 
 int idTime(string time, int i = 0){
 //verificar se o time esta no campeonato ou nao
