@@ -2,7 +2,7 @@
 
 using namespace std;
 
-vector<string> BDtimes = {
+vector<string> times = {
         "Avai", // 1
         "Barra", // 2
         "Brusque", // 3
@@ -11,21 +11,16 @@ vector<string> BDtimes = {
         "Concordia", // 6
         "Criciuma", // 7
         "Figueirense", // 8
-        "Hercilio Luz", // 9
+        "HercilioLuz", // 9
         "Joinville", // 10
-        "Marcilio Dias", // 11
+        "MarcilioDias", // 11
         "SantaCatarina", // 12
         "Nenhum" // 13
     };
 
-    vector<string> BDfases = {
-            "Qualquer", // tratado como 1 apos verificação e assim por diante
-            "Grupos", // tratado como 2 
-            "Mata-Mata", // tratado como 3
-    };
 
 
-string jogosGrupos(int a, int b) {
+string JogosGrupos(int a, int b) {
     vector<vector<vector<string>>> matrizGRUPOS(20, vector<vector<string>>(20));
 
  //JOGOS COM O TIME MANDANTE
@@ -1113,7 +1108,7 @@ string jogosGrupos(int a, int b) {
 }
 
 
-string jogosMata(int a, int b) {
+string JogosMata(int a, int b) {
     vector<vector<vector<string>>> matrizMatas(20, vector<vector<string>>(20));
 
     matrizMatas[3][5] = {
@@ -1223,92 +1218,162 @@ string jogosMata(int a, int b) {
         resultado += jogo + "\n";
     }
     return resultado;
-    
-    
+
 }
 
 
-
-
-
-int idTime(string time, int i = 0){         //verificar se o time esta no campeonato ou nao
-
-    if(time == BDtimes[i]){
-        return (i+1);
-    }if(i==(BDtimes.size()-1)){//caso tenham mais times  o .size ajuda a ter controle da quantidade
-        return 0; 
-    }else{
-        return idTime(time,++i); // ++i soma 1 a i
-    }    
-}
-
-int idFase(string fase, int i = 0){
-//verificar se o time esta no campeonato ou nao
-    if(fase == BDfases[i]){
-        return i+1;
-    }if(i==(BDfases.size()-1)){//caso tenham mais BDtimes  o .size ajuda a ter controle da quantidade
-        return i; 
-    }else{
-        return idTime(fase,++i); // ++i soma 1 a i
-    }
-}
 int main(){
-    vector<bool>verificarDados = { true , true, true};
+  
+    cout << endl;
+    
     int i;
-    int time1Int, time2Int;
-    string time1,time2,fase;
-    cout << "Qual seu primeiro time e segundo time:" << endl<< endl;
     
-        for(i = 0;i < BDtimes.size();i++){ // escrever os times na tela
-        cout << "|" <<BDtimes[i] << "|" << endl;
-    
-        }
-        
-        
-    while(verificarDados[0]||verificarDados[1]){//enquanto true reescreva valor
-        cin >> time1 >> time2; //input dos BDtimes
-        while(time1==time2){
-            cout << "nao insira valores iguais, tente novamente"<< endl;
-            cin >> time2;
-        }
-        cout << "";
-        if(idTime(time1)){ //verificar se digitou um time valido
-            cout << "time 1 valido" << endl;
-            verificarDados[0] = false;
-        }else{
-            cout << "time 1 invalido" << endl;
-        }
-        if(idTime(time2)){ //verificar se digitou um time valido
-            cout << "time 2 valido" << endl;
-            verificarDados[1] = false;
-        }else{
-            cout << "time 2 invalido" << endl;
-        }
-        if(verificarDados[0]||verificarDados[1]){
-            cout << "verifique se escreveu corretamente o time" <<endl;
-        }
-        
-    }
-    time1Int = idTime(time1);
-    time2Int = idTime(time2);
-    // cout << endl << "Qual fase voce deseja ver ? " << endl;
-    // for(i = 0;i < BDfases.size();i++){ // escrever as possiveis fases na tela
-    //     cout << BDfases[i] << endl;
-    
-    //     }
-    // while(verificarDados[2]){
-    //     cin >> fase;
-    //     if(idFase(fase)){ //validar o valor
-    //         verificarDados[2] = false;
-    //     }else{
-    //         cout << "verifique se escreveu corretamente a fase" << endl;
-    //     }
 
-    // }
-    if(!(idTime(time1) && idTime(time2))){// eu quero apenas 1 verdadeiro (ouexclusivo) nessa situação eu nunca terei os dois falsos dado as verificações
-        //codigo para apenas quando eu tenho 1 time
-    }else{
-        cout << jogosGrupos(time1Int,time2Int);
+    cout << "Esses são os times disponíveis, se quiser verificar os jogos de algum time específico digite o time e nenhum. Lembre-se de digitar de acordo com o nome dos times acima" << endl;
+
+    for(i = 0;i < times.size();i++){ // escrever os times na tela
+    cout << times[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << "Digite a quantidade de jogos que você quer visualizar" << endl;
+    int nJogos; cin >> nJogos;
+        
+
+    while(nJogos--){
+        cout << endl;
+        
+        string fase;
+        int time1Int, time2Int;
+        string time1, time2;
+
+        cout << "Digite a fase que você quer visualizar (Grupos ou Mata-Mata)" << endl;
+        cin >> fase;
+
+        cout << "Qual seu primeiro time:  (Caso o time tenha dois nomes siga o exemplo: SantaCatarina)" << endl;
+        cin >> time1;
+
+        cout << "Qual o seu segundo time: (Caso o time tenha dois nomes siga o exemplo: SantaCatarina)" << endl;
+        cin >> time2;
+
+        cout << endl;
+            
+        if(time1 == "Avai"){
+            time1Int = 1;
+        }
+        else if(time1 == "Barra"){
+            time1Int = 2;
+        }
+        else if(time1 == "Brusque"){
+            time1Int = 3;
+        }
+        else if(time1 == "Caravaggio"){
+            time1Int = 4;
+        }
+        else if(time1 == "Chapecoense"){
+            time1Int = 5;
+        }
+        else if(time1 == "Concordia"){
+            time1Int = 6;
+        }
+        else if(time1 == "Criciuma"){
+            time1Int = 7;
+        }
+        else if(time1 == "Figueirense"){
+            time1Int = 8;
+        }
+        else if(time1 == "HercilioLuz"){
+            time1Int = 9;
+        }
+        else if(time1 == "Joinville"){
+            time1Int = 10;
+        }
+        else if(time1 == "MarcilioDias"){
+            time1Int = 11;
+        }
+        else if(time1 == "SantaCatarina"){
+            time1Int = 12;
+        }
+        else if(time1 == "Nenhum"){
+            time1Int = 13;
+        }
+        else{
+            time1Int = 20;  // Valor aleatório para cair na condicao de time inesxistente
+        }
+
+
+        if(time2 == "Avai"){
+            time2Int = 1;
+        }
+        else if(time2 == "Barra"){
+            time2Int = 2;
+        }
+        else if(time2 == "Brusque"){
+            time2Int = 3;
+        }
+        else if(time2 == "Caravaggio"){
+            time2Int = 4;
+        }
+        else if(time2 == "Chapecoense"){
+            time2Int = 5;
+        }
+        else if(time2 == "Concordia"){
+            time2Int = 6;
+        }
+        else if(time2 == "Criciuma"){
+            time2Int = 7;
+        }
+        else if(time2 == "Figueirense"){
+            time2Int = 8;
+        }
+        else if(time2 == "HercilioLuz"){
+            time2Int = 9;
+        }
+        else if(time2 == "Joinville"){
+            time2Int = 10;
+        }
+        else if(time2 == "MarcilioDias"){
+            time2Int = 11;
+        }
+        else if(time2 == "SantaCatarina"){
+            time2Int = 12;
+        }
+        else if(time2 == "Nenhum"){
+            time2Int = 13;
+        }
+        else{
+            time2Int = 20;  // Valor aleatório para cair na condicao de time inesxistente
+        }
+
+
+        if(time1Int == 20 || time2Int == 20){
+            cout << "Você digitou algum time errado, tente novamente" << endl;
+            nJogos++;
+        }
+        
+        else if(time1Int == 13){
+            cout << JogosGrupos(time1Int, time2Int) << endl;
+            nJogos++;
+            cout << "Digite algum desses jogos" << endl;
+        }
+
+        else if(time2Int == 13){
+            cout << JogosGrupos(time1Int, time2Int) << endl;
+            nJogos++;
+            cout << "Digite algum desses jogos" << endl;
+        }
+
+        else if(fase == "Grupos"){
+            cout << JogosGrupos(time1Int, time2Int) << endl;
+        }
+
+        else if(fase == "Mata-Mata"){
+            cout << JogosMata(time1Int, time2Int) << endl;
+        }
+
     }
 
 }
+
+

@@ -1240,41 +1240,87 @@ bool idTime(string time, int i = 0){
 }
 
 int main(){
-    cout << JogosGrupos(1, 13);
+  
     cout << endl;
-    cout << JogosGrupos(2, 13);
+    
     vector<bool>verificartime = { true , true};
     int i;
     string time1,time2;
-    cout << "Qual seu primeiro time e segundo time:" << endl<< endl;
+
     
-        for(i = 0;i < times.size();i++){ // escrever os times na tela
-        cout << times[i] << endl;
-    
-        }
+    for(i = 0;i < times.size();i++){ // escrever os times na tela
+    cout << times[i] << endl;
+    }
+
+        cout << endl;
+
+    cout << "Digite a quantidade de jogos que você quer visualizar" << endl;
+    int nJogos; cin >> nJogos;
         
-    while(verificartime[0]||verificartime[1]){//enquanto true reescreva valor
-        cin >> time1 >> time2; //input dos times
-        while(time1==time2){
-            cout << "nao insira valores iguais, tente novamente"<< endl;
-            cin >> time2;
+
+    while(nJogos--){
+        cout << endl;
+        
+        string fase;
+        int time1Int, time2Int;
+
+        cout << "Digite a fase que você quer visualizar (Grupos ou Mata-Mata)" << endl;
+        cin >> fase;
+
+        cout << "Qual seu primeiro time e segundo time:" << endl;
+
+        while(verificartime[0]||verificartime[1]){//enquanto true reescreva valor
+            cin >> time1 >> time2; //input dos times
+            
+                while(time1==time2){
+                cout << "Não insira valores iguais, caso queira ver os jogos daquele time digite o time e nenhum."<< endl;
+                cin >> time2;
         }
+
         if(idTime(time1)){ //verificar se digitou um time valido
-            cout << "time 1 valido" << endl;
+            cout << "Time 1 Válido" << endl;
             verificartime[0] = false;
         }else{
-            cout << "time 1 invalido" << endl;
+            cout << "Time 1 Inválido" << endl;
         }
+
         if(idTime(time2)){ //verificar se digitou um time valido
-            cout << "time 2 valido" << endl;
+            cout << "Time 2 Válido" << endl;
             verificartime[1] = false;
         }else{
-            cout << "time 2 invalido" << endl;
+            cout << "Time 2 Inválido" << endl;
         }
-        if(verificartime[0]||verificartime[1]){
-            cout << "verifique se escreveu corretamente" <<endl;
+
+        if(!verificartime[0]||!verificartime[1]){
+            cout << "Verifique se escreveu corretamente" << endl;
         }
+
+        time1Int = idTime(time1);
+        time2Int = idTime(time2);
         
+
+        if(time1Int == 13){
+            cout << JogosGrupos(time1Int, time2Int) << endl;
+            nJogos++;
+            cout << "Digite algum desses jogos" << endl;
+            break;
+        }
+        else if(time2Int == 13){
+            cout << JogosGrupos(time1Int, time2Int) << endl;
+            nJogos++;
+            cout << "Digite algum desses jogos" << endl;
+            break;
+        }
+        else if(fase == "Grupos"){
+            cout << JogosGrupos(time1Int, time2Int) << endl;
+            break;
+        }
+        else if(fase == "Mata-Mata"){
+            cout << JogosMata(time1Int, time2Int) << endl;
+            break;
+        }
     }
+
+}
 
 }
