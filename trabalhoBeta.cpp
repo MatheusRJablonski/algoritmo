@@ -18,13 +18,14 @@ vector<string> BDtimes = {
         "Nenhum" // 13
     };
 vector<string> BDfases = {
-            "Qualquer", // tratado como 1 apos verificação e assim por diante
-            "Grupos", // tratado como 2 
-            "Mata-Mata", // tratado como 3
+            "Qualquer", // tratado como 0 apos verificação e assim por diante
+            "Grupos", // tratado como 1
+            "Mata-Mata", // tratado como 2
         };
 
 
-string buscarJogos(int a, int b) {
+
+string buscarJogosGrupos(int a, int b) {
     
     
     vector<vector<string>> jogosGrupos(14, vector<string>(14));
@@ -32,7 +33,7 @@ string buscarJogos(int a, int b) {
 
     vector<vector<string>> possiveisJogos(12, vector<string>(2));
         
-    // JOGOS DOS TIMES MANDANTES
+    // POSSIVEIS JOGOS DOS TIMES MANDANTES
         possiveisJogos[0][0] = {
             "| FASE DE GRUPOS |\n"
             "AVAÍ x SANTA CATARINA\n"
@@ -160,7 +161,7 @@ string buscarJogos(int a, int b) {
             "SANTA CATARINA x AVAÍ"
         };
 
-    // JOGOS COM O TIME VISITANTE
+    // POSSIVEIS JOGOS COM O TIME VISITANTE
 
         possiveisJogos[0][1] = {
             "| FASE DE GRUPOS |\n"
@@ -1085,122 +1086,122 @@ string buscarJogos(int a, int b) {
     //
    
         
-    // if (matrizGRUPOS[a][b].empty()) return "Esse jogo não existe";
-    // string resultado;
-    // for (const auto& jogo : matrizGRUPOS[a][b]) {
-    //     resultado += jogo + "\n";
-    // }
-    // return resultado;
-}
-
-
-string jogosMata(int a, int b) {
-    vector<vector<string>> jogosMataMata(20, vector<string>(20));
-
-jogosMataMata[3][5] =
-    "JOGO: BRUSQUE x CHAPECOENSE\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 0 (4) x 0 (5)\n"
-    "RODADA: Quartas de final\n"
-    "CARTOES AMARELOS: 8\n"
-    "CARTOES VERMELHOS: 0\n"
-    "DATA: 01/03/2025\n"
-    "HORÁRIO: 18:30\n"
-    "ESTÁDIO: Estádio Augusto Bauer";
-
-jogosMataMata[7][10] =
-    "JOGO: CRICIÚMA x JOINVILLE\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 0 (7) x 0 (8)\n"
-    "RODADA: Quartas de final\n"
-    "CARTOES AMARELOS: 6\n"
-    "CARTOES VERMELHOS: 0\n"
-    "DATA: 02/03/2025\n"
-    "HORÁRIO: 19:00\n"
-    "ESTÁDIO: Estádio Heriberto Hülse";
-
-jogosMataMata[12][11] =
-    "JOGO: SANTA CATARINA x MARCÍLIO DIAS\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 2 x 0\n"
-    "RODADA: Quartas de final\n"
-    "CARTOES AMARELOS: 9\n"
-    "CARTOES VERMELHOS: 1\n"
-    "DATA: 04/03/2025\n"
-    "HORÁRIO: 20:30\n"
-    "ESTÁDIO: Estádio Municipal Alfredo João Krieck";
-
-jogosMataMata[1][8] =
-    "JOGO: AVAÍ x FIGUEIRENSE\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 1 (4) x 1 (2)\n"
-    "RODADA: Quartas de final\n"
-    "CARTOES AMARELOS: 2\n"
-    "CARTOES VERMELHOS: 0\n"
-    "DATA: 05/03/2025\n"
-    "HORÁRIO: 21:30\n"
-    "ESTÁDIO: Estádio da Ressacada";
-
-jogosMataMata[12][1] =
-    "JOGO: SANTA CATARINA x AVAÍ\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 1 (7) x 1 (8)\n"
-    "RODADA: Semifinal\n"
-    "CARTOES AMARELOS: 2\n"
-    "CARTOES VERMELHOS: 0\n"
-    "DATA: 08/03/2025\n"
-    "HORÁRIO: 17:45\n"
-    "ESTÁDIO: Estádio Municipal Alfredo João Krieck";
-
-jogosMataMata[5][10] =
-    "JOGO: CHAPECOENSE x JOINVILLE\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 2 x 1\n"
-    "RODADA: Semifinal\n"
-    "CARTOES AMARELOS: 12\n"
-    "CARTOES VERMELHOS: 0\n"
-    "DATA: 09/03/2025\n"
-    "HORÁRIO: 17:00\n"
-    "ESTÁDIO: Estádio Municipal Josué Annoni";
-
-jogosMataMata[5][1] =
-    "JOGO: CHAPECOENSE x AVAÍ\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 2 x 2\n"
-    "RODADA: Final, Jogo 1\n"
-    "CARTOES AMARELOS: 0\n"
-    "CARTOES VERMELHOS: 0\n"
-    "DATA: 15/03/2025\n"
-    "HORÁRIO: 16:30\n"
-    "ESTÁDIO: Estádio Municipal Josué Annoni";
-
-jogosMataMata[1][5] =
-    "JOGO: AVAÍ x CHAPECOENSE\n"
-    "FASE: MATA-MATA\n"
-    "PLACAR: 1 x 1 (AVAI CAMPEAO)\n"
-    "RODADA: Final, Jogo 2\n"
-    "CARTOES AMARELOS: 12\n"
-    "CARTOES VERMELHOS: 4\n"
-    "DATA: 22/03/2025\n"
-    "HORÁRIO: 16:30\n"
-    "ESTÁDIO: Estádio da Ressacada";
-
-
-
-    // Se a posição não tiver jogos, retorna string que nao tem
-    if (jogosMataMata[a][b].empty()) return "Esse jogo não existe";
-
+    if (jogosGrupos[a][b].empty()) return "Esse jogo não existe";
     string resultado;
-    for (const auto& jogo : jogosMataMata[a][b]) {
+    for (const auto& jogo : jogosGrupos[a][b]) {
         resultado += jogo + "\n";
     }
     return resultado;
+}
+
+
+string buscarJogosMata(int a, int b) {
+    vector<vector<string>> jogosMataMata(20, vector<string>(20));
+
+    jogosMataMata[3][5] =
+        "JOGO: BRUSQUE x CHAPECOENSE\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 0 (4) x 0 (5)\n"
+        "RODADA: Quartas de final\n"
+        "CARTOES AMARELOS: 8\n"
+        "CARTOES VERMELHOS: 0\n"
+        "DATA: 01/03/2025\n"
+        "HORÁRIO: 18:30\n"
+        "ESTÁDIO: Estádio Augusto Bauer";
+
+    jogosMataMata[7][10] =
+        "JOGO: CRICIÚMA x JOINVILLE\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 0 (7) x 0 (8)\n"
+        "RODADA: Quartas de final\n"
+        "CARTOES AMARELOS: 6\n"
+        "CARTOES VERMELHOS: 0\n"
+        "DATA: 02/03/2025\n"
+        "HORÁRIO: 19:00\n"
+        "ESTÁDIO: Estádio Heriberto Hülse";
+
+    jogosMataMata[12][11] =
+        "JOGO: SANTA CATARINA x MARCÍLIO DIAS\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 2 x 0\n"
+        "RODADA: Quartas de final\n"
+        "CARTOES AMARELOS: 9\n"
+        "CARTOES VERMELHOS: 1\n"
+        "DATA: 04/03/2025\n"
+        "HORÁRIO: 20:30\n"
+        "ESTÁDIO: Estádio Municipal Alfredo João Krieck";
+
+    jogosMataMata[1][8] =
+        "JOGO: AVAÍ x FIGUEIRENSE\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 1 (4) x 1 (2)\n"
+        "RODADA: Quartas de final\n"
+        "CARTOES AMARELOS: 2\n"
+        "CARTOES VERMELHOS: 0\n"
+        "DATA: 05/03/2025\n"
+        "HORÁRIO: 21:30\n"
+        "ESTÁDIO: Estádio da Ressacada";
+
+    jogosMataMata[12][1] =
+        "JOGO: SANTA CATARINA x AVAÍ\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 1 (7) x 1 (8)\n"
+        "RODADA: Semifinal\n"
+        "CARTOES AMARELOS: 2\n"
+        "CARTOES VERMELHOS: 0\n"
+        "DATA: 08/03/2025\n"
+        "HORÁRIO: 17:45\n"
+        "ESTÁDIO: Estádio Municipal Alfredo João Krieck";
+
+    jogosMataMata[5][10] =
+        "JOGO: CHAPECOENSE x JOINVILLE\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 2 x 1\n"
+        "RODADA: Semifinal\n"
+        "CARTOES AMARELOS: 12\n"
+        "CARTOES VERMELHOS: 0\n"
+        "DATA: 09/03/2025\n"
+        "HORÁRIO: 17:00\n"
+        "ESTÁDIO: Estádio Municipal Josué Annoni";
+
+    jogosMataMata[5][1] =
+        "JOGO: CHAPECOENSE x AVAÍ\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 2 x 2\n"
+        "RODADA: Final, Jogo 1\n"
+        "CARTOES AMARELOS: 0\n"
+        "CARTOES VERMELHOS: 0\n"
+        "DATA: 15/03/2025\n"
+        "HORÁRIO: 16:30\n"
+        "ESTÁDIO: Estádio Municipal Josué Annoni";
+
+    jogosMataMata[1][5] =
+        "JOGO: AVAÍ x CHAPECOENSE\n"
+        "FASE: MATA-MATA\n"
+        "PLACAR: 1 x 1 (AVAI CAMPEAO)\n"
+        "RODADA: Final, Jogo 2\n"
+        "CARTOES AMARELOS: 12\n"
+        "CARTOES VERMELHOS: 4\n"
+        "DATA: 22/03/2025\n"
+        "HORÁRIO: 16:30\n"
+        "ESTÁDIO: Estádio da Ressacada";
+
+
+
+        // Se a posição não tiver jogos, retorna string que nao tem
+        if (jogosMataMata[a][b].empty()) return "Esse jogo não existe";
+
+        string resultado;
+        for (const auto& jogo : jogosMataMata[a][b]) {
+            resultado += jogo + "\n";
+        }
+        return resultado;
     
     
 }
 
 int idTime(string time, int i = 0){
-//verificar se o time esta no campeonato ou nao
+    //verificar se o time esta no campeonato ou nao
     if(time == BDtimes[i]){
         return (i+1);
     }if(i==(BDtimes.size()-1)){//caso tenham mais times  o .size ajuda a ter controle da quantidade
@@ -1212,19 +1213,19 @@ int idTime(string time, int i = 0){
     
 }
 int idFase(string fase, int i = 0){
-//verificar se o time esta no campeonato ou nao
+
     if(fase == BDfases[i]){
         return i+1;
-    }if(i==(BDfases.size()-1)){//caso tenham mais BDtimes  o .size ajuda a ter controle da quantidade
-        return i; 
+    }if(i==(BDfases.size()-1)){
+        return 0; 
     }else{
-        return idTime(fase,++i); // ++i soma 1 a i
+        return idTime(fase,++i); 
     }
 }
 int main(){
     vector<bool>verificarDados = { true , true, true};
     int i;
-    int time1Int, time2Int;
+    int time1Int, time2Int, faseInt;
     string time1,time2,fase;
     cout << "Qual seu primeiro time e segundo time:" << endl<< endl;
     
@@ -1243,12 +1244,14 @@ int main(){
         cout << "";
         if(idTime(time1)){ //verificar se digitou um time valido
             cout << "time 1 valido" << endl;
+            time1Int = idTime(time1) - 1;
             verificarDados[0] = false;
         }else{
             cout << "time 1 invalido" << endl;
         }
         if(idTime(time2)){ //verificar se digitou um time valido
             cout << "time 2 valido" << endl;
+             time2Int = idTime(time2) - 1;
             verificarDados[1] = false;
         }else{
             cout << "time 2 invalido" << endl;
@@ -1258,26 +1261,40 @@ int main(){
         }
         
     }
-    time1Int = idTime(time1) - 1; //nunca chega sendo 0
-    time2Int = idTime(time2) - 1;
-    // cout << endl << "Qual fase voce deseja ver ? " << endl;
-    // for(i = 0;i < BDfases.size();i++){ // escrever as possiveis fases na tela
-    //     cout << BDfases[i] << endl;
     
-    //     }
-    // while(verificarDados[2]){
-    //     cin >> fase;
-    //     if(idFase(fase)){ //validar o valor
-    //         verificarDados[2] = false;
-    //     }else{
-    //         cout << "verifique se escreveu corretamente a fase" << endl;
-    //     }
+    cout << endl << "Qual fase voce deseja ver ? " << endl;
+    for(i = 0;i < BDfases.size();i++){ // escrever as possiveis fases na tela
+        cout << BDfases[i] << endl;
+    
+        }
+    while(verificarDados[2]){
+        cin >> fase;
+        if(idFase(fase)){ //validar o valor
+            verificarDados[2] = false;
+            faseInt = idFase(fase) - 1;
+        }else{
+            cout << "verifique se escreveu corretamente a fase" << endl;
+        }
 
-    // }
-    if(!(idTime(time1) && idTime(time2))){// eu quero apenas 1 verdadeiro (ouexclusivo) nessa situação eu nunca terei os dois falsos dado as verificações
-        //codigo para apenas quando eu tenho 1 time
+    }
+
+    if(time1Int == 12 || time2Int == 12){
+        if(time1Int == 12){
+            cout << possiveisJogos[time2Int][1] //BUSCANDO PELO VISITANTE
+
+        }else{
+            cout << possiveisJogos[time1Int][0]//BUSCANDO PELO MANDANTE
+        }
     }else{
-        cout << buscarJogos(time1Int,time2Int);
+        if(faseInt == 1){
+            cout << buscarJogosGrupos(time1Int,time2Int);
+        }else if (faseInt == 2){
+            cout << buscarJogosMata(time1Int,time2Int);
+        }else{
+            cout << buscarJogosGrupos(time1Int,time2Int);
+            cout << buscarJogosMata(time1Int,time2Int);
+        }
+        
     }
 
 }
