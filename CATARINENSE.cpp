@@ -18,8 +18,6 @@ vector<string> times = {
         "Nenhum" // 13
     };
 
-
-
 string JogosGrupos(int a, int b) {
     vector<vector<vector<string>>> matrizGRUPOS(20, vector<vector<string>>(20));
 
@@ -1107,7 +1105,6 @@ string JogosGrupos(int a, int b) {
     return resultado;
 }
 
-
 string JogosMata(int a, int b) {
     vector<vector<vector<string>>> matrizMatas(20, vector<vector<string>>(20));
 
@@ -1220,7 +1217,6 @@ string JogosMata(int a, int b) {
     return resultado;
 
 }
-
 
 int valorTime1(string time1){
 
