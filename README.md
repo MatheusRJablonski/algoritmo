@@ -29,8 +29,9 @@ Criar um programa em **C++** que armazena os jogos do **Campeonato Catarinense d
 *(Exemplo de organização - ajuste conforme o seu código)*
 
 - **CATARINENSE.cpp**: Arquivo principal onde o programa inicia e executa toda a lógica.
-- **funcoes.cpp** *(se houver)*: Contém funções auxiliares para organização.
-- **utils.h** *(se houver)*: Arquivo de cabeçalho com definições e protótipos.
+- **dados.cpp**: Contém funções para guardar os dados.
+- **funcoes.cpp**: Contém funções auxiliares para organização.
+
 
 ---
 
