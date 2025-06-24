@@ -43,7 +43,7 @@ O código não possui interface gráfica, sendo projetado para execução via **
 1. **Compile o código** (o comando pode variar conforme seu compilador e sistema operacional):
 
 ```bash
-g++ CATARINENSE.cpp -o catarinao
+g++ CATARINENSE.cpp dados.cpp -o catarinao
 ```
 
 
