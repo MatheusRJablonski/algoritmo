@@ -1,7 +1,7 @@
 # 📄 Documentação do Projeto / Trabalho de Algoritmos
 
 ## 🏆 Nome do Projeto:
-**CATARINÃO 2025**
+**BUSCA CATARINÃO 2025**
 
 ---
 
