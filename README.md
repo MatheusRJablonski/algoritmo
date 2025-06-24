@@ -26,12 +26,10 @@ Criar um programa em **C++** que armazena os jogos do **Campeonato Catarinense d
 
 ## 📂 Estrutura do Código
 
-*(Exemplo de organização - ajuste conforme o seu código)*
-
 - **CATARINENSE.cpp**: Arquivo principal onde o programa inicia e executa toda a lógica.
 - **dados.cpp**: Contém funções para guardar os dados.
-- **funcoes.cpp**: Contém funções auxiliares para organização.
-- **catarinense2025.csv**: Dados em planilia.
+- **funcoes.hpp**: Contém funções auxiliares para organização.
+- **catarinense2025.csv**: Dados em planilha.
 
 
 ---
